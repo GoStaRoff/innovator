@@ -1,0 +1,41 @@
+name: innovator
+description: App for creating new products
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get:
+  dio: ^4.0.0
+  flutter_svg: any
+  get_storage: ^2.0.2
+  firebase_auth: ^3.3.4
+  auto_size_text: ^3.0.0
+  google_sign_in: ^5.2.1
+  firebase_core: ^1.10.6
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+flutter:
+
+
+  uses-material-design: true
+  assets:
+    - assets/icons/
+    - assets/images/
+
+
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: fonts/Montserrat-Regular.ttf
