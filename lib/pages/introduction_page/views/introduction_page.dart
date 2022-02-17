@@ -99,16 +99,10 @@ class _IntroductionPageState extends State<IntroductionPage> {
                 5,
                 (int itemIndex) => Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 6.0),
-                  child: GestureDetector(
-                    onTap: () {
-                      _pageController.animateToPage(itemIndex,
-                          duration: Duration(seconds: 1), curve: Curves.easeIn);
-                    },
-                    child: CircleAvatar(
-                      radius: 5,
-                      backgroundColor:
-                          pageIndex == itemIndex ? VIOLET_COLOR : GREY_COLOR,
-                    ),
+                  child: CircleAvatar(
+                    radius: 5,
+                    backgroundColor:
+                        pageIndex == itemIndex ? VIOLET_COLOR : GREY_COLOR,
                   ),
                 ),
               ),

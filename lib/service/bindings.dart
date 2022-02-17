@@ -7,3 +7,10 @@ class AuthBinding implements Bindings {
     Get.lazyPut<AuthController>(() => AuthController());
   }
 }
+
+// class InitialBinding implements Bindings {
+//   @override
+//   void dependencies() {
+//     Get.lazyPut<MainController>(() => MainController());
+//   }
+// }

@@ -17,6 +17,7 @@ class CustomInput extends StatelessWidget {
   var onChanged;
   var initialValue;
   var style;
+  var maxLength;
 
   CustomInput(
       {Key? key,
@@ -30,6 +31,7 @@ class CustomInput extends StatelessWidget {
       this.inputFormatters,
       this.keyboardType,
       this.onChanged,
+      this.maxLength,
       this.initialValue,
       this.style})
       : super(key: key);
@@ -43,16 +45,19 @@ class CustomInput extends StatelessWidget {
       height: height,
       width: width,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        padding: maxLength == null
+            ? EdgeInsets.symmetric(horizontal: 20.0)
+            : EdgeInsets.only(bottom: 16.0, left: 16.0, right: 16.0),
         child: TextFormField(
           keyboardType: keyboardType,
+          maxLength: maxLength == null ? null : 200,
           inputFormatters: inputFormatters,
           obscureText: isPassword,
           maxLines: isPassword ? 1 : 10,
           style: style ?? MAIN_TEXT_STYLE_BLACK.copyWith(color: Colors.black),
           decoration: InputDecoration(
             hintText: hintText,
-            hintStyle: MAIN_TEXT_STYLE_BLACK,
+            hintStyle: MAIN_TEXT_STYLE_BLACK.copyWith(color: Color(0xFFB9B9B9)),
             border: InputBorder.none,
           ),
           controller: controller,

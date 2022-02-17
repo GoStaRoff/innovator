@@ -13,13 +13,22 @@ dependencies:
     sdk: flutter
   get:
   dio: ^4.0.0
+  jiffy: ^4.1.0
+  bubble: ^1.2.1
+  chewie: ^1.2.2
   flutter_svg: any
   get_storage: ^2.0.2
+  reorderables: ^0.4.2
   firebase_auth: ^3.3.4
+  video_player: ^2.2.10
+  url_launcher: ^6.0.17
   auto_size_text: ^3.0.0
   google_sign_in: ^5.2.1
+  image_picker: ^0.8.4+4
   firebase_core: ^1.10.6
+  pull_to_refresh: ^2.0.0
   cupertino_icons: ^1.0.2
+  stop_watch_timer: ^1.3.1
 
 dev_dependencies:
   flutter_test:

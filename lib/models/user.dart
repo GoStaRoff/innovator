@@ -6,7 +6,7 @@ class User {
     this.fullName,
   });
 
-  String? clientId;
+  int? clientId;
   String? photoUrl;
   String? email;
   String? fullName;

@@ -6,6 +6,9 @@ class PagePadding extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(padding: EdgeInsets.only(top: 10.0, left: 20.0, right: 20.0),child: child,);
+    return Padding(
+      padding: EdgeInsets.only(top: 10.0, left: 16.0, right: 16.0),
+      child: child,
+    );
   }
 }

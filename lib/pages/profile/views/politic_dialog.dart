@@ -9,7 +9,7 @@ class PoliticDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DraggableContainer(
-      height: Get.height / 1.7,
+      height: Get.height / 1.6,
       children: [
         const Text(
           "Политика конфиденциальности",

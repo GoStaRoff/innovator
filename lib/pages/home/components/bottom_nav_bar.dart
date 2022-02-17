@@ -6,8 +6,9 @@ import 'package:innovator/pages/global_components/bottom_rounded_container.dart'
 import 'package:innovator/pages/global_components/rounded_container.dart';
 
 class FABBottomAppBarItem {
-  FABBottomAppBarItem({required this.iconData});
+  FABBottomAppBarItem({required this.iconData, this.notifEnabled});
   String iconData;
+  var notifEnabled;
 }
 
 class FABBottomAppBar extends StatefulWidget {
@@ -63,19 +64,45 @@ class FABBottomAppBarState extends State<FABBottomAppBar> {
     required ValueChanged<int> onPressed,
     required isActive,
   }) {
-    return RoundedContainer(
-      onTap: () => onPressed(index),
-      height: 40,
-      color: isActive ? VIOLET_COLOR : Colors.white,
-      width: 40,
-      borderRadius: 12,
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: SvgPicture.asset(
-          item.iconData,
-          color: isActive ? Colors.white : const Color(0xFF8D8D8D),
+    return Stack(
+      alignment: Alignment.center,
+      children: [
+        Container(
+          height: 44,
+          width: 44,
         ),
-      ),
+        Positioned(
+          child: RoundedContainer(
+            onTap: () => onPressed(index),
+            height: index == 2 ? 40 : 40,
+            color: isActive ? VIOLET_COLOR : Colors.white,
+            width: 40,
+            borderRadius: 12,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SvgPicture.asset(
+                item.iconData,
+                color: isActive ? Colors.white : const Color(0xFF8D8D8D),
+              ),
+            ),
+          ),
+        ),
+        Positioned(
+          right: 0,
+          top: 0,
+          child: Visibility(
+            visible: index == 2 && item.notifEnabled,
+            child: CircleAvatar(
+              backgroundColor: Colors.white,
+              radius: 6,
+              child: CircleAvatar(
+                backgroundColor: GREEN_COLOR,
+                radius: 5,
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
