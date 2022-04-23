@@ -1,4 +1,4 @@
-package com.innovatione.innovator
+package com.innovation.innovator.innovator
 
 import io.flutter.embedding.android.FlutterActivity
 

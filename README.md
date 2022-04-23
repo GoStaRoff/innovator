@@ -1,6 +1,6 @@
 # innovator
 
-App for creating new products
+Application for creating innovation
 
 ## Getting Started
 

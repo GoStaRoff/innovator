@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:747406261822:android:736c691bf45c86a6a91b6f",
+        "mobilesdk_app_id": "1:747406261822:android:94c76e68f837e4cea91b6f",
         "android_client_info": {
-          "package_name": "com.innovatione.innovator"
+          "package_name": "com.innovation.innovator.innovator"
         }
       },
       "oauth_client": [
@@ -29,6 +29,13 @@
             {
               "client_id": "747406261822-8t2erudg1tji0o6robgenv5b0e19ba8o.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "747406261822-gec4i3d4tepj7ff4gedavcn1g7ho07tp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.innovatione.innovator"
+              }
             }
           ]
         }
