@@ -6,6 +6,8 @@ import 'package:innovator/pages/introduction_page/views/introduction_page.dart';
 import 'package:innovator/pages/loading/loading_page.dart';
 import 'package:innovator/pages/news/views/news_page.dart';
 import 'package:innovator/pages/profile/views/profile_page.dart';
+import 'package:innovator/pages/useful/views/all_articles_page.dart';
+import 'package:innovator/pages/useful/views/all_videos_page.dart';
 import 'package:innovator/service/bindings.dart';
 import 'package:innovator/service/views/not_found_page.dart';
 
@@ -26,6 +28,8 @@ List<GetPage<dynamic>> appPages = [
   ),
   GetPage(name: IntroductionPage.id, page: () => const IntroductionPage()),
   GetPage(name: ProfilePage.id, page: () => ProfilePage()),
+  GetPage(name: AllVideosPage.id, page: () => const AllVideosPage()),
+  GetPage(name: AllArticlesPage.id, page: () => const AllArticlesPage()),
   GetPage(name: NewsPage.id, page: () => const NewsPage()),
   GetPage(name: LoadingPage.id, page: () => const LoadingPage()),
 ];

@@ -188,7 +188,7 @@ class _IdeaScreenState extends State<IdeaScreen>
                 ),
               ),
               Positioned(
-                  bottom: 24,
+                  bottom: 74,
                   right: 24,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,

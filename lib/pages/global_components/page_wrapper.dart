@@ -11,6 +11,7 @@ class PageWrapper extends StatelessWidget {
   var controller;
   var color;
   bool withListView;
+  bool withPagePadding;
   PageWrapper({
     required this.children,
     this.fab,
@@ -18,6 +19,7 @@ class PageWrapper extends StatelessWidget {
     this.controller,
     this.header,
     this.withListView = true,
+    this.withPagePadding = true,
   });
 
   @override
@@ -28,6 +30,7 @@ class PageWrapper extends StatelessWidget {
       floatingActionButton: fab,
       body: SafeArea(
         child: PagePadding(
+          withPagePadding: withPagePadding,
           child: Column(
             children: [
               header ?? Container(),
@@ -38,6 +41,7 @@ class PageWrapper extends StatelessWidget {
                         children: children,
                       )
                     : Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: children,
                       ),
               ),

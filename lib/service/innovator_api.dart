@@ -6,7 +6,7 @@ import 'package:http_parser/http_parser.dart';
 class InnovatorApi {
   static Dio dio = Dio(
     BaseOptions(
-      baseUrl: "http://65.108.182.146:8080",
+      baseUrl: "http://65.108.50.45:8888",
       headers: {
         "Content-Type": "application/json",
       },

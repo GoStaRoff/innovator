@@ -18,7 +18,9 @@ class AuthController extends GetxController {
 
 //""""""""""""""""""""""""""Авторизация с помощью Google""""""""""""""""""""""""""
   Future<void> signInGoogle() async {
+    //
     // Get.toNamed(HomePage.id);
+    // return;
     _googleSignIn
         .disconnect(); // Выход из аккаунта Google усли он не был выполнен
     var user; // Инициализация переменной 'user'
@@ -33,7 +35,8 @@ class AuthController extends GetxController {
               photoUrl: value
                   .photoUrl!); // Вызов функии api-сервиса и запись в переменную 'result'
           print(result);
-          if (result.data["message"] == "Authentication succesfull") {
+          print(value.email);
+          if (result.data["message"] == "Authentication successful") {
             mainController.user = User(
                 email: value.email,
                 fullName: value.displayName,

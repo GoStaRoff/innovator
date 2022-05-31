@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:innovator/main_controller.dart';
+import 'package:innovator/pages/donation/views/donation_screen.dart';
 import 'package:innovator/pages/home/components/bottom_nav_bar.dart';
 import 'package:innovator/pages/ideas/views/idea_screen.dart';
 import 'package:innovator/pages/news/views/news_screen.dart';
 import 'package:innovator/pages/products/views/products_screen.dart';
+import 'package:innovator/pages/useful/views/useful_screen.dart';
 
 class HomePage extends StatefulWidget {
   static String id = "/home";
@@ -35,7 +37,7 @@ class _HomePageState extends State<HomePage> {
                     Expanded(
                       child: ProductsScreen(),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 72,
                     )
                   ],
@@ -50,12 +52,17 @@ class _HomePageState extends State<HomePage> {
                     )
                   ],
                 ),
-                Center(
-                  child: Text("4"),
+                Column(
+                  children: const [
+                    Expanded(
+                      child: UsefulScreeen(),
+                    ),
+                    SizedBox(
+                      height: 72,
+                    )
+                  ],
                 ),
-                Center(
-                  child: Text("5"),
-                ),
+                DonationScreen(),
               ],
             ),
             // _list[_page],
